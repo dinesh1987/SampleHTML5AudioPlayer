@@ -1,0 +1,24 @@
+<div class="header-player">
+	<div id="jukebox" class="b1">		
+		<div class="loader">
+			<div class="load-progress">
+				<div class="play-progress"></div><a href="javascript:void('0')" id="ancLeftPos"></a>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="circle flLeft iconColor" align="center" ng-click="play($event)" title="Play">
+				<span class="play icon-play"></span>
+			</div>
+			<div class="forward iconColor flLeft mrLeft20px" align="center" ng-click="forward($event)" title="Forward"><span class="icon-forward"></span></div>
+			<div class="curTime  fnt12px flLeft mrLeft20px"></div>
+			<div class="circle flRight iconColor" align="center" ng-click="mute($event)" title="Mute">
+				<span class="icon-volume-up"></span>
+			</div>			
+		</div>
+		<audio class="aud">
+			<p>
+				Oops, looks like your browser doesn't support HTML 5 audio.
+			</p>
+		</audio>
+	</div>
+</div>

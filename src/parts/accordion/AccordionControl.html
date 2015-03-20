@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="plunker">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+    <script src="../Scripts/Acc.js" type="text/javascript"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/bootstrap-combined.min.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/Login.css" />
+   
+<!--    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">-->
+  </head>
+  <body>
+  <section id="accordionControl">
+
+<div ng-controller="AccordionDemoCtrl">
+
+  <accordion close-others="oneAtATime">
+    <accordion-group >
+    <accordion-heading><img="../Images/favorites.jpeg" />
+      FAVORITES</accordion-heading>
+    </accordion-group>
+    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+      {{group.content}}<br />
+      {{group.content1}}
+      <br />
+      {{group.content2}}
+      <br />
+      {{group.content3}}
+      <br />
+      {{group.content4}}
+      <br />
+      {{group.content5}}
+    </accordion-group>
+    <accordion-group heading="MY PROFILE">      
+    </accordion-group>
+  </accordion>
+</div>
+</section>
+  </body>
+</html>

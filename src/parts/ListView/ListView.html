@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html ng-app="ListView" ng-controller="AppCtrler">
+<head>
+    <link rel="stylesheet" type="text/css" href="../Styles/Base.css">
+    <meta charset="utf-8" />
+    <title>List View</title>
+    <script type="text/javascript" src="../../../vendor/angular/angular.min.js"></script>    
+</head>
+<body class="hideVeriticalScroll">
+    <div class="ml10 whiteFont" style="background-color: dimgray;">
+        <span ng-repeat="Img in ListViewImages">
+            <table>
+                <tr>
+                    <td colspan="2" class="valignnCenter">
+                        <img src="{{Img.src}}" alt="Channel"/>
+                    </td>
+                    <td class="valignnCenter">
+                        <span class="fs bold" >{{Img.TrackAndChannel}}</span>
+                        <br />                
+                        <span>{{Img.Album}}</span>
+                        <br />
+                        <span class="fs">{{Img.Singer}}</span>
+                        <br />
+                    </td>
+                    <td colspan="2" class="valignnCenter">
+
+                    </td>
+                </tr>
+            </table>
+        </span>
+    </div>
+    <script type="text/javascript">
+        //var listOfImages = {
+        //    image: []
+        //};
+        var app = angular.module("ListView", []);
+
+        app.controller("AppCtrler",
+        function ($scope) {
+            //alert("2");
+            //LoadImages(10);
+            function LoadImages(noOfImgs) {
+                //alert("3");
+                var images = [];
+                for (var i = 1; i <= noOfImgs; i++) {
+                    //alert("LoopCnt:" + i);
+                    images.push({
+                        id: (i),
+                        src: "../../assets/Images/Image" + i + ".jpg",
+                        TrackAndChannel: "WILLIES ROADHOUSE CH 56" + i,
+                        Album: "Mule Skinner Blues",
+                        Singer: "Dolly Parton"
+                    });
+                }
+                //alert("Length:" + images.length);
+                return images;
+                //$scope.ListViewImages = listOfImages.image;                
+            }
+            //alert("Invoke function call");
+            $scope.ListViewImages = LoadImages(10);
+            //alert("Returned");
+        }
+        );
+    </script>
+</body>
+</html>

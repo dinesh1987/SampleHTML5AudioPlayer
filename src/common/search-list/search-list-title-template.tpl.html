@@ -1,0 +1,42 @@
+<div class="search-list-title">
+	<div class="whiteFont dimWhiteBG outerDiv">
+		<div class="w99 h45 dimWhiteBG hide-search-list">
+			<div class="searchFilter mt10 pr">
+			<span class="valignnCenter cptr fltl ml10 mt3"><i class="icon-cog cblue fs20"></i></span>
+			<input type="text" ng-model="search" class="search-query w65 ml20 h21 fs16" placeholder="  Search Ajith"><i class="icon-search cblue fs20 cptr positionIcon"></i>
+			</div>
+		</div>
+		<div class="w99 hh55 dimGrayBG fs12">
+			<div class="w21 fltl ml17 mt9 hide-more-list-header">
+				<span class="cblue">​CHANNEL LISTING​</span>​
+			</div>
+			<div class="w21 fltl ml50 mt9 hide-more-list-header">
+				<span>​RECENTLY PLAYED​</span>​
+			</div>​
+			<div class="fltr ml5 mt17 mr12 hide-more-list-header">
+				<span class="cblue">​MY STUFF​</span>​
+			</div>
+			<div class="ml103 hide-list-header">
+				<span>MORE LIKE THIS</span>
+			</div>​​
+		</div>
+		<div class="innerDiv">
+			<div ng-repeat="Img in ListViewImages | filter:search" class="w103 dimCementBG mt4">
+				<div class="valignnCenter w25" id="selecteddivId">
+					<img src="{{Img.src}}" alt="Channel" datasrc={{Img.audiosrc}} ng-click="playSong($event)" />
+				</div>
+				<div class="valignnCenter w65">
+					<span class="valignnCenter txtcblack" style="float:left;">
+						<span class="icon-bar-chart"><span class="fs12 pl10">CH#</span></span>
+					<label class="fs bold" style="display:block;" ng-click="playSong($event)" datasrc={{Img.audiosrc}}>{{Img.TrackAndChannel}}</label>
+					<label class="fs15 bold" style="display:block;" ng-click="playSong($event)" datasrc={{Img.audiosrc}}>{{Img.Album}}</label>
+					<label class="fs14" style="display:block;" ng-click="playSong($event)" datasrc={{Img.audiosrc}}>{{Img.Singer}}</label>
+					</span>
+					<span style="float:right;padding:20px 0px;" class="valignnCenter cptr iconhide"><i class="toggle-favorite cblue icon-heart-empty" ng-click="toggleFavorite($event)"></i></span>
+				</div>
+				<hr/>
+			</div>
+		</div>
+	</div>
+</div>
+			

@@ -1,0 +1,117 @@
+<div class="side-content">
+	<div id="mainContent">
+ <div class="staticContent">
+  <div class="channelLogo">
+    <img src="../assets/Images/chlogo2.png" class="sec1"></img>
+    <span class="sec2"><text style="font-size:16px;font-weight:bold">Ajith HITS 1| 002 </text><br/>
+    <text style="font-size:12px;font-weight:bold;">
+  Ajith Hits with Trisha</text></span>
+  </div>
+  <div class="albumArt">
+    <img src="../assets/Images/AlbumCover.jpg" class="albumImage"></img>    
+    <div class="dragSocial" ng-click="showSocialPanel($event)">&#8804;&nbsp;Social Panel</div>
+  </div>
+  <div class="titleContent"> 
+    <span class="title1">Mankatha</span>
+    <span class="title2">Mankatha da</span>
+    <span class="toggle" ng-click="toggle($event)" title="Expand">+</span>
+  </div>
+  </div>
+  <div id="contentShow" class="check-element animate-show" ng-show="contentShow">
+    <div class="albumHeaderInfo">
+       <img src="../assets/Images/author.jpg" class="albsec1"></img>
+       <span class="albsec2"><text style="font-size:20px;">Mankatha da </text><br/>
+        <text style="font-size:16px;margin:10px 0px;color:rgb(0,174,239);">
+  Read More</text></span>
+    </div>
+    <div class="lyrics">
+      <span class="lyricsTitle">LYRICS</span>
+      <span class="lyricsContent">Work up for stuning actions<br/>Work up for stuning actions<br/>Work up for stuning actions<br/>Work up for stuning actions<br/><a href="javascript:void('0');">More</a></span>
+    </div>
+    
+    <div class="video">
+      <div class="videoTitle">VIDEO</div>
+      <div class="videoContent pos-rel" ng-mouseover="showicon($event)" ng-mouseleave="hideicon($event)">
+       <video src="../assets/p/p1.mp4"></video>
+         	<div class="circle posi-abs" ng-click="playPause($event)">
+				<i class="icon-play vamiddle"></i>
+			</div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="border1 w99 hauto fltl bgroundwhite">
+		<accordion close-others="false" ng-repeat="album in albums">
+			<accordion-group is-open="group.isOpen">
+				<accordion-heading>
+					<div class="w98 h115 posrel border1 bgroundgray pt10 pl10">
+						<div class="valignnCenter w25 fltl">
+							<img src="{{album.src}}" alt="Channel" datasrc={{album.audiosrc}} >
+						</div>
+
+						<div class="valignnCenter w65 fltl posabs left100 cblack pl10">
+							<span class="valignnCenter txtcblack" style="float:left;">
+								 <label class="fbold fsize" style="display:block;">{{album.TrackAndChannel}}</label> 
+								 <label class="fbold" style="display:block;" datasrc={{Img.audiosrc}}>{{album.ConceptName}}</label> 
+								 <label class="fcolor" style="display:block;" datasrc={{Img.audiosrc}}>{{album.time}}</label> </span>
+						</div>
+						<div class="w7 flrt mt41 mr21">
+							<i ng-class="{true : 'icon-minus', false : 'icon-plus'}[!!group.isOpen]" class="flrt"></i>
+						</div>
+						
+					</div>
+				</accordion-heading>
+
+				<div id="contentShow" class="check-element animate-show">
+					<div class="albumHeaderInfo">
+						<div class="fltl">
+						<img src="{{album.src}}" class="albsec1"></img>
+						</div>
+						<div class="fltl mt22">
+						<span class="albsec3">
+							<text style="font-size:20px;">
+								{{album.ConceptName}}
+							</text>
+							<br/>
+							<a href="javascript:void('0');">Read More</a></span>
+							</div>
+					</div>
+					<div class="lyrics">
+						<span class="lyricsTitle">LYRICS (WHAT A PLEASURE)</span>
+						<span class="lyricsContent">Worken up and here I am
+							<br/>
+							Worken up and here I am
+							<br/>
+							Worken up and here I am
+							<br/>
+							Worken up and here I am
+							<br/>
+							<a href="javascript:void('0');">More</a></span>
+					</div>
+					<span class="lyricsTitle" style="font-weight: bold; font-size: 20px;">MORE LIKE THIS</span>
+					<div class="video">
+						<div style="width:103%; height:200px;">
+							<div ng-repeat="moreAlbum in moreAlbums">
+								<div style="width:48%; height: 150px; float:left; background: rgb(109,110,113); margin: 3px;">
+									<div style="padding-left:8px;padding-top:8px;">
+										<i class="icon-bar-chart"></i>
+										<span class="cblack">CHANNEL NAME | CH#</span>
+									</div>
+									<div style="width:99%; height: 98px;">
+									<div style="width:55%; height:42px; float:left; padding-top:10px;">
+									<img src={{moreAlbum.src}}  style="padding-left:8px; width:75%"\>
+									</div>
+									<div style="width:42%; height:42px; float:left; padding-top:10px;">
+										<span><lable class="cblack fbold">{{moreAlbum.trackName}}</lable></span><br />
+										<span><lable class="cblack fbold">{{moreAlbum.ArtistName}}</lable></span>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</accordion-group>
+		</accordion>
+	</div>
+</div></div>

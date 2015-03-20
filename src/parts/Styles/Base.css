@@ -1,0 +1,65 @@
+.ViewSelected
+{
+	background-color:rgba(255,0,0); 
+	opacity:0.8; 
+	width:13.6%; 
+	height:200px; 
+	background-image:url("Image/AlbumCover.jpg"); 
+}
+
+.ViewAction
+{	
+	background-image:url('Image/ActionSprite.jpg');
+	width:150px; 
+	height: 25px;
+}
+
+.pl10
+{
+	padding-left:10px;
+}
+
+.ml10
+{
+	margin-left:10px;
+}
+
+.bgNoRepeat
+{
+	background-repeat:no-repeat;
+}
+
+.fs
+{
+	font-size:x-small;
+}
+
+.fl
+{
+	font-size:x-large;
+}
+
+.hideVeriticalScroll 
+{
+    overflow-y:hidden;
+}
+
+.valignnCenter
+{
+    vertical-align:central
+}
+
+.bold 
+{
+    font-weight:bold
+}
+
+.whiteFont 
+{
+    color:white;
+}
+
+.dimGrayBG
+{
+	background: #696969;
+}

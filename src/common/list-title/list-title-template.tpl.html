@@ -1,0 +1,27 @@
+<div class="list-title">
+	<div class="ml10 whiteFont dimGrayBG fltl outerDiv">
+		<div class="innerDiv">
+	    <div ng-repeat="Img in ListViewImages">
+	        <table width="100%">
+	            <tr>
+	                <td colspan="2" class="valignnCenter w30">
+	                    <img src="{{Img.src}}" alt="Channel" datasrc={{Img.audiosrc}} ng-click="playSong($event)" />
+	                </td>
+	                <td class="valignnCenter w60">
+	                    <span class="fs bold" ng-click="playSong($event)" datasrc={{Img.audiosrc}}>{{Img.TrackAndChannel}}</span>
+	                    <br />                
+	                    <label class="fxl" ng-click="playSong($event)" datasrc={{Img.audiosrc}}>{{Img.Album}}</label>
+	                    <br />
+	                    <label class="fl" ng-click="playSong($event)" datasrc={{Img.audiosrc}}>{{Img.Singer}}</label>
+	                    <br />
+	                </td>
+	                <td colspan="2" class="valignnCenter w10">
+							<i class="toggle-favorite icon-heart" ng-click="toggleFavorite($event)"></i>
+	                </td>
+	            </tr>
+	        </table>
+	        <hr>
+	    </div>
+	    </div>
+	</div>
+</div>
